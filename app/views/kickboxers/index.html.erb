@@ -1,0 +1,9 @@
+<h1>Welcome to the index page for kickboxers</h1>
+
+<ul>
+<% @kickboxers.each do |kickboxer| %>
+  <li><%= link_to kickboxer.name, kickboxer %></li>
+<% end %>
+</ul>
+
+<%= link_to "See Headliner", headliner_path(Kickboxer.first.id, Kickboxer.last.id) %>

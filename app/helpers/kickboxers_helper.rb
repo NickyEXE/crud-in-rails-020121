@@ -1,0 +1,2 @@
+module KickboxersHelper
+end

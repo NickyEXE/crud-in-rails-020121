@@ -1,0 +1,2 @@
+class Kickboxer < ApplicationRecord
+end
