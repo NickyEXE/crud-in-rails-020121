@@ -1,0 +1,13 @@
+<%= form_for @kickboxer do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :speed %>
+  <%= f.number_field :speed %>
+  <%= f.label :fist_size %>
+  <%= f.number_field :fist_size %>
+  <%= f.label :missing_teeth %>
+  <%= f.number_field :missing_teeth %>
+  <%= f.label :villain %>
+  <%= f.check_box :villain %>
+  <%= f.submit %>
+<% end %>

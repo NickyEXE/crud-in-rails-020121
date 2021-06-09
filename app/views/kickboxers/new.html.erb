@@ -1,0 +1,60 @@
+<h1>CREATE YOUR FIGHTER</h1>
+
+<%# Use the form partial %>
+<%= render "form" %>
+
+
+<% if false %>
+<%# form_for is useful for creating a form related to a model %>
+
+<%= form_for @kickboxer do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :speed %>
+  <%= f.number_field :speed %>
+  <%= f.label :fist_size %>
+  <%= f.number_field :fist_size %>
+  <%= f.label :missing_teeth %>
+  <%= f.number_field :missing_teeth %>
+  <%= f.label :villain %>
+  <%= f.check_box :villain %>
+  <%= f.submit %>
+<% end %>
+
+<% end %>
+
+<%#Don't use regular HTML FORMS in Rails. If you do, you need an authenticity token!%>
+
+<% if false %>
+<form action="/kickboxers" method="post">
+  <input type="hidden" name="authenticity_token" value=<%= form_authenticity_token %>>
+  <label for="name">Name:</label>
+  <input type="text" name="kickboxer[name]"><br/>
+  <label for="speed">Speed:</label>
+  <input type="integer" name="kickboxer[speed]"><br/>
+  <label for="fist_size">Fist Size:</label>
+  <input type="integer" name="kickboxer[fist_size]"><br/>
+  <label for="missing_teeth">Missing Teeth:</label>
+  <input type="integer" name="kickboxer[missing_teeth]"><br/>
+  <label for="villain">Villain:</label>
+  <input type="checkbox" name="kickboxer[villain]"><br/>
+  <input type="submit" value="Submit">
+  </form>
+<% end %>
+
+<%# Form tag is most useful when creating a form that is not related to creating or updating a RESTful resource %>
+<%if false%>
+<%= form_tag "/kickboxers", method: :post do %>
+  <%= label_tag :name %>
+  <%= text_field_tag :name %>
+  <%= label_tag :speed %>
+  <%= number_field_tag :speed %>
+  <%= label_tag :fist_size %>
+  <%= number_field_tag :fist_size %>
+  <%= label_tag :missing_teeth %>
+  <%= number_field_tag :missing_teeth %>
+  <%= label_tag "Villain" %>
+  <%= check_box_tag :villain %>
+  <%= submit_tag "Submit!" %>
+<% end %>
+<% end %>

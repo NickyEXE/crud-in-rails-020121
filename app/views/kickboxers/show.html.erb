@@ -3,5 +3,5 @@
 <p><strong>Fist Size: </strong><%= @kickboxer.fist_size %></p>
 <p><strong>Missing Teeth: </strong><%= @kickboxer.missing_teeth %></p>
 <p><strong>Status: </strong><%= @kickboxer.villain ? "Heel" : "Face" %></p>
-
-<%= link_to "See All Kickboxers", kickboxers_path %>
+<%= link_to "Edit this Kickboxer", edit_kickboxer_path(@kickboxer)  %>
+<%= button_to "FINISH HIM", kickboxer_path(@kickboxer), method: :delete %>
